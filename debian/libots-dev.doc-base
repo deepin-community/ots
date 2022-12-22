@@ -1,0 +1,10 @@
+Document: ots
+Title: OTS Reference Manual
+Author: Nadav Rotem
+Abstract: The Open Text Summarizer (ots) is a library for
+ automatically summarizing texts.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libots-dev/html/ots/index.html
+Files: /usr/share/doc/libots-dev/html/ots/*.html

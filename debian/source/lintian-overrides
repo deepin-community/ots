@@ -1,0 +1,6 @@
+# The upstream project no longer exists. Consequently, it is not possible
+# to send files. Overriding as requested by lintian. Item 2 in Links[1].
+#
+# [1] http://cs.haifa.ac.il/~rotemn/links.html
+#
+ots source: maintainer-manual-page debian/ots.1

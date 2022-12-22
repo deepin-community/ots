@@ -1,0 +1,12 @@
+Test-Command: ots -v | grep ots
+Restrictions: superficial
+
+Test-Command: cp articles/linus1.txt $AUTOPKGTEST_TMP;
+                 cd $AUTOPKGTEST_TMP;
+                 ots -a linus1.txt
+
+Test-Command: cp articles/washingtonpost1.txt $AUTOPKGTEST_TMP;
+                 cd $AUTOPKGTEST_TMP;
+                 ots --ratio 40 --html --out=washpost1.html washingtonpost1.txt;
+                 file --mime-type washpost1.html | grep 'text/html'
+Depends: @, file

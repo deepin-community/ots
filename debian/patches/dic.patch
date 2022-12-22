@@ -1,0 +1,22 @@
+From: Witold Filipczyk <witekfl@poczta.onet.pl>
+Date: Wed, 15 Jan 2014 18:46:29 +0100
+Subject: Remove duplicate en.xml
+
+https://github.com/pld-linux/ots
+---
+ dic/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/dic/Makefile.am b/dic/Makefile.am
+index a74dbf1..f2ec141 100644
+--- a/dic/Makefile.am
++++ b/dic/Makefile.am
+@@ -1,7 +1,7 @@
+ DICTS=bg.xml ca.xml cs.xml cy.xml da.xml de.xml el.xml en.xml eo.xml es.xml \
+       et.xml eu.xml fi.xml fr.xml ga.xml gl.xml he.xml hu.xml ia.xml id.xml \
+       is.xml it.xml lv.xml mi.xml ms.xml mt.xml nl.xml nn.xml pl.xml pt.xml \
+-      ro.xml ru.xml sv.xml tl.xml tr.xml uk.xml yi.xml en.xml
++      ro.xml ru.xml sv.xml tl.xml tr.xml uk.xml yi.xml
+ 
+ pkgdata_DATA = $(DICTS)
+ 

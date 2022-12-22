@@ -1,0 +1,184 @@
+ots (0.5.0-6) unstable; urgency=medium
+
+  * QA upload.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + libots-dev: Add Multi-Arch: same.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 02 Feb 2021 15:43:36 +0000
+
+ots (0.5.0-5) unstable; urgency=medium
+
+  * QA upload.
+  * Created ots binary package. Consequently: (Closes: #429232)
+      - debian/control: added a new section (ots).
+      - debian/libots0.install: removed binary path.
+      - debian/libots0.manpages: renamed to ots.manpages.
+      - debian/ots.install: created to install the binary ots.
+  * debian/source/lintian-overrides: added to override a lintian message
+    about a maintainer-provided manpage.
+  * debian/watch: changed to fix fake site address.
+
+ -- Luis Paulo Linares <lpfllinares@gmail.com>  Sat, 25 Jul 2020 20:48:50 -0300
+
+ots (0.5.0-4) unstable; urgency=medium
+
+  * QA upload.
+  * Run wrap-and-sort.
+  * Created manpage for ots binary. Consequently:
+      - debian/libots0.manpages: created to install the manpage.
+      - debian/ots.1: created to provide the manpage.
+      - debian/ots.txt: created as source file for manpage to be generated
+        by txt2man.
+  * Using new DH level format. Consequently:
+      - debian/compat: removed.
+      - debian/control: changed from 'debhelper' to 'debhelper-compat' in
+        Build-Depends field and bumped level to 13.
+  * debian/control:
+      - Added 'Rules-Requires-Root: no' to source stanza.
+      - Bumped Standards-Version to 4.5.0.
+      - Changed Vcs-* URLs to salsa.debian.org.
+      - Removed dh-autoreconf in Build-Depends field because it is useless
+        since DH level 10.
+  * debian/copyright:
+      - Migrated to 1.0 format.
+      - Updated all information.
+  * debian/libots0.symbols: added Build-Depends-Package field.
+  * debian/libots-dev.doc-base: changed to fix the path of html docs.
+  * debian/libots-dev.links: added to create a symlink for html docs.
+  * debian/not-installed: created to list a not installed .la file.
+  * debian/rules: removed '--with autoreconf --parallel' arguments passed to dh
+    because it is unnecessary since DH level 10.
+  * debian/salsa-ci.yml: created to provide CI tests for Salsa.
+  * debian/tests/control: created to perform CI tests.
+  * debian/watch:
+      - Added a fake site to explain about the current status of the original
+        upstream homepage.
+      - Bumped version to 4.
+
+ -- Luis Paulo Linares <lpfllinares@gmail.com>  Fri, 10 Jul 2020 08:03:00 -0300
+
+ots (0.5.0-3) unstable; urgency=medium
+
+  * QA upload.
+  * Set Maintainer to Debian QA Group. (see #836472)
+  * Fix the Makefile dependencies. (Closes: #906498)
+
+ -- Adrian Bunk <bunk@debian.org>  Sat, 18 Aug 2018 02:37:25 +0300
+
+ots (0.5.0-2.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Bump dh compat to 9 (Closes: #817612)
+  * Switch to 3.0 (quilt) and add 2 simple patches instead of modifying
+    source directly:
+    - gtkdoc.patch
+    - dic.patch
+  * Switch to newer dh style rules and simplify
+  * Add Vcs-* entries for collab-maint
+  * Add symbols file
+  * libots-dev: Install the very minimal gtk-doc html
+  * Bump Standards-Version to 3.9.8
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 26 Jun 2016 04:22:32 -0400
+
+ots (0.5.0-2.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use dh-autoreconf to support new architectures (Closes: #727254)
+    (Thanks to Edmund Grimley-Evans)
+
+ -- Wookey <wookey@debian.org>  Fri, 16 Oct 2015 02:29:37 +0000
+
+ots (0.5.0-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * src/Makefile.in: Added -lm to ots_LDADD.  Fixed FTBFS.  Closes: #555878.
+  * debian/rules: Fixed non-empty-dependency_libs-in-la-file.  Closes: #633183.
+  * Fixed debhelper-but-no-misc-depends.
+  * Fixed copyright-refers-to-versionless-license-file.
+  * debian/control: Added Homepage field.
+  * debian/watch: Added.
+
+ -- Bart Martens <bartm@debian.org>  Thu, 06 Oct 2011 18:52:29 +0200
+
+ots (0.5.0-2) unstable; urgency=low
+
+  * Bumped to Standards-Version: 3.8.0.
+  * Made it binNMU safe - closes: #454949
+
+ -- Masayuki Hatta (mhatta) <mhatta@debian.org>  Thu, 17 Jul 2008 16:23:13 +0900
+
+ots (0.5.0-1) unstable; urgency=low
+
+  * New upstream release - closes: #429228, #290572, #333571.
+  * Relibtoolized to fix bad lib filenames without .so suffix.
+
+ -- Masayuki Hatta (mhatta) <mhatta@debian.org>  Wed, 05 Dec 2007 03:35:17 +0900
+
+ots (0.4.2+cvs.2004.02.20-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTBFS with gcc-4.0 (Closes: #287886)
+  * Configure with --disable-gtk-doc since it in fact doesn't build
+    with gtk-doc-tools (Closes: #336046)
+
+ -- Frank Lichtenheld <djpig@debian.org>  Sat, 29 Oct 2005 01:50:41 +0200
+
+ots (0.4.2+cvs.2004.02.20-1) unstable; urgency=low
+
+  * New upstream release (CVS snapshot).
+  * [control] change Maintainer field.
+
+ -- Masayuki Hatta (mhatta) <mhatta@debian.org>  Fri, 20 Feb 2004 03:41:44 +0900
+
+ots (0.4.1+cvs.2003.10.26-1) unstable; urgency=low
+
+  * New upstream release (CVS snapshot).
+  * Acknowledged NMU (Thanks Jordi) - closes: #216229
+
+ -- Masayuki Hatta <mhatta@debian.org>  Sun, 26 Oct 2003 12:13:46 +0900
+
+ots (0.4.1+cvs.2003.08.30-1.1) unstable; urgency=low
+
+  * Non-Maintainer Upload.
+  * Relibtoolize to fix bad lib filenames without .so suffix.
+  * debian/control: build-depend on gtk-doc-tools.
+  * debian/libots0.files: adjust filenames of libs to install.
+  * debian/libots-dev: install html docs.
+  * debian/rules:
+    + uncomment call to dh_makeshlibs, to get shlibs in libots0
+      (closes: #216229).
+    + rm generated docs on clean, as it's not cleaned by distclean.
+    + install docs in the correct path for dh_movefiles.
+  * src/Makefile.am: add $(OTS_LIBS) to libots_1_la_LIBADD, to link to all
+    the required libs.
+
+ -- Jordi Mallach <jordi@debian.org>  Thu, 23 Oct 2003 15:54:52 +0200
+
+ots (0.4.1+cvs.2003.08.30-1) unstable; urgency=low
+
+  * New upstream release (CVS snapshot).
+  * Bumped Standards-Version to 3.6.0.
+
+ -- Masayuki Hatta <mhatta@debian.org>  Sat, 30 Aug 2003 06:39:20 +0900
+
+ots (0.4.1+cvs.2003.08.28-1) unstable; urgency=low
+
+  * New upstream release (CVS snapshot).
+  * Added Build-Depends: libpopt-dev (yup, I forgot it) - closes: #203772
+
+ -- Masayuki Hatta <mhatta@debian.org>  Thu, 28 Aug 2003 17:06:05 +0900
+
+ots (0.3.0+cvs.2003.07.27-2) unstable; urgency=low
+
+  * Added Build-Depends: libpopt-dev - closes: #203772
+
+ -- Masayuki Hatta <mhatta@debian.org>  Wed, 20 Aug 2003 21:49:05 +0900
+
+ots (0.3.0+cvs.2003.07.27-1) unstable; urgency=low
+
+  * Initial Release - closes: #202980, ,#200513
+
+ -- Masayuki Hatta <mhatta@debian.org>  Sun, 27 Jul 2003 01:38:54 +0900
